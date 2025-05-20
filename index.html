@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="hu">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Őszi Akvarelltábor a Berky-kúriában | 2025. november 2–5.</title>
+
+    <!-- SEO Meta -->
+    <meta
+      name="description"
+      content="Csatlakozz az őszi Akvarelltáborhoz a hangulatos Berky-kúriában Nagykónyi, Dél-Dunántúl régióban 2025. november 2–5. között. Festő workshopok, szállás és félpanziós ellátás – jelentkezz most!"
+    />
+    <meta
+      name="keywords"
+      content="akvarelltábor, Berky-kúria, akvarell workshop, festőtábor, Nagykónyi, Dél-Dunántúl, 2025 november, tábor"
+    />
+    <link
+      rel="canonical"
+      href="https://www.berky-kuria.hu/akvarelltabor-2025-11"
+    />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="event" />
+    <meta property="og:title" content="Őszi Akvarelltábor a Berky-kúriában" />
+    <meta
+      property="og:description"
+      content="2025. november 2–5. Akvarell workshopok, szállás és félpanziós ellátás Nagykónyi Berky-kúriában. Jelentkezz most!"
+    />
+    <meta
+      property="og:image"
+      content="https://www.berky-kuria.hu/assets/images/bg1.jpg"
+    />
+    <meta
+      property="og:url"
+      content="https://www.berky-kuria.hu/akvarelltabor-2025-11"
+    />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Őszi Akvarelltábor a Berky-kúriában" />
+    <meta
+      name="twitter:description"
+      content="2025. november 2–5. Akvarell workshopok Nagykónyi Berky-kúriában. Jelentkezz most!"
+    />
+    <meta
+      name="twitter:image"
+      content="https://www.berky-kuria.hu/assets/images/bg1.jpg"
+    />
+
+    <!-- JSON-LD struktúra (Event) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Event",
+        "name": "Őszi Akvarelltábor a Berky-kúriában",
+        "startDate": "2025-11-02T09:00",
+        "endDate": "2025-11-05T17:00",
+        "eventStatus": "https://schema.org/EventScheduled",
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+        "image": [
+          "https://www.berky-kuria.hu/assets/images/bg1.jpg",
+          "https://www.berky-kuria.hu/assets/images/bg2.jpg"
+        ],
+        "description": "Festő workshopok, szállás és félpanziós ellátás négynapos, őszi elvonuláson a Berky-kúriában.",
+        "location": {
+          "@type": "Place",
+          "name": "Berky-kúria",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Nagykónyi",
+            "addressRegion": "Dél-Dunántúl",
+            "addressCountry": "HU"
+          }
+        },
+        "organizer": {
+          "@type": "Person",
+          "name": "Kinga",
+          "url": "https://kinga-paints.example.com"
+        },
+        "offers": {
+          "@type": "Offer",
+          "url": "https://www.berky-kuria.hu/akvarelltabor-2025-11/jelentkezes",
+          "price": "100000",
+          "priceCurrency": "HUF",
+          "availability": "https://schema.org/InStock",
+          "validFrom": "2025-06-01T00:00"
+        }
+      }
+    </script>
+
+    <!-- Tailwind, ikonok, EmailJS, Confetti -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+      emailjs.init({ publicKey: "aDbIT2CikF2jifjFV" });
+    </script>
+    <script src="./assets/vendor/canvas-confetti/dist/confetti.browser.js"></script>
+
+    <style>
+      html,
+      body {
+        scroll-behavior: smooth;
+      }
+      .reveal {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+      }
+      .reveal.active {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .parallax {
+        background-attachment: fixed;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-gray-50 text-gray-800 font-sans leading-relaxed scroll-smooth"
+  >
+    <a
+      href="#mainContent"
+      class="sr-only focus:not-sr-only focus:block p-2 bg-indigo-600 text-white"
+    >
+      Ugrás a tartalomra
+    </a>
+
+    <!-- HERO -->
+    <header
+      class="relative h-screen bg-cover bg-center parallax"
+      style="background-image: url('assets/img/bg1.jpg')"
+    >
+      <!-- STICKY NAV (hidden by default) -->
+      <nav
+        id="stickyNav"
+        class="fixed top-4 left-4 right-4 backdrop-blur-lg bg-white bg-opacity-30 rounded-xl shadow-lg opacity-0 pointer-events-none z-50 transition-opacity duration-300"
+      >
+        <div class="flex items-center justify-between px-6 py-3">
+          <!-- Balra a cím -->
+          <a href="#" class="text-gray-900 font-semibold text-base lg:text-lg">
+            Őszi Akvarelltábor
+          </a>
+          <!-- Jobbra a gomb -->
+          <a
+            href="#jelentkezes"
+            class="bg-indigo-600 hover:bg-indigo-700 text-sm lg:text-base text-white font-semibold py-2 px-4 rounded-full transition"
+          >
+            Jelentkezés
+          </a>
+        </div>
+      </nav>
+      <div
+        class="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center text-center px-4"
+      >
+        <h1
+          class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white drop-shadow-lg"
+        >
+          Őszi Akvarelltábor<br />a Berky-kúriában
+        </h1>
+        <div
+          class="mt-4 flex flex-col sm:flex-row items-center text-gray-200 space-y-2 sm:space-y-0 sm:space-x-6 text-sm sm:text-lg"
+        >
+          <span class="flex items-center">
+            <i data-lucide="calendar" class="w-5 h-5 mr-2"></i>2025. november
+            2–5.
+          </span>
+          <a
+            href="https://maps.app.goo.gl/bEuejYvbSehpWxxm6"
+            target="_blank"
+            class="flex items-center"
+          >
+            <i data-lucide="map-pin" class="w-5 h-5 mr-2"></i>Nagykónyi,
+            Dél-Dunántúl
+          </a>
+        </div>
+        <p class="mt-6 max-w-2xl text-gray-200 text-base sm:text-lg">
+          Tarts velem egy varázslatos őszi akvarelltáborba, ahol a festés
+          mellett a pihenésé és a közös élményeké a főszerep!
+        </p>
+        <a
+          href="#jelentkezes"
+          class="mt-8 inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-6 rounded-lg shadow-lg transition"
+        >
+          Jelentkezem
+        </a>
+
+        <a
+          href="#overview"
+          class="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+        >
+          <i
+            data-lucide="mouse"
+            class="w-8 h-8 text-white opacity-75 animate-bounce"
+            aria-hidden="true"
+          ></i>
+          <span class="sr-only">Görgess lefelé</span>
+        </a>
+      </div>
+    </header>
+
+    <main id="mainContent" role="main">
+      <!-- OVERVIEW -->
+      <section
+        id="overview"
+        class="reveal py-16 px-6 lg:px-20"
+        aria-labelledby="overview-label"
+      >
+        <div class="max-w-3xl mx-auto text-center">
+          <h2 class="text-3xl sm:text-4xl font-bold mb-4">Mi vár rád?</h2>
+          <p class="text-lg text-gray-700 mb-6">
+            Egy eldugott, hangulatos falucska, a Berky-kúria ad otthont ennek a
+            négynapos kikapcsolódásnak – festünk, nevetünk, sétálunk, jókat
+            eszünk, és inspiráljuk egymást.
+          </p>
+          <ul class="space-y-4 text-gray-700">
+            <li class="flex items-start">
+              <i
+                data-lucide="brush"
+                class="w-6 h-6 flex-shrink-0 mr-3 text-indigo-600"
+              ></i
+              >6 workshop, amelyekből 2–3 alkalommal plein air festeni indulunk.
+            </li>
+            <li class="flex items-start">
+              <i
+                data-lucide="home"
+                class="w-6 h-6 flex-shrink-0 mr-3 text-indigo-600"
+              ></i
+              >Kényelmes, inspiráló környezet a kúria belső termeiben.
+            </li>
+            <li class="flex items-start">
+              <i
+                data-lucide="package"
+                class="w-6 h-6 flex-shrink-0 mr-3 text-indigo-600"
+              ></i
+              >Festőeszközöket én biztosítom: papír, ecsetek, színek,
+              kiegészítők.
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- WHO IS IT FOR -->
+      <section
+        id="audience"
+        class="reveal bg-gray-100 py-16 px-6 lg:px-20"
+        aria-labelledby="audience-label"
+      >
+        <div class="max-w-3xl mx-auto text-center">
+          <h2 class="text-3xl sm:text-4xl font-bold mb-4">Kinek ajánlom?</h2>
+          <p class="text-lg text-gray-700 mb-6">
+            Ha szereted a természetet, a csendet és a festést – és jól jönne egy
+            kis őszi elvonulás, akkor itt a helyed!
+          </p>
+          <p class="text-gray-700">
+            Kezdők és haladók is bátran jöhetnek. Különösen ajánlott 30 év
+            feletti nőknek, akik szeretnének kiszakadni a hétköznapokból, és
+            valami igazán szépet alkotni.
+          </p>
+        </div>
+      </section>
+
+      <!-- PROGRAM -->
+      <section
+        id="program"
+        class="reveal py-16 px-6 lg:px-20"
+        aria-labelledby="program-label"
+      >
+        <div class="max-w-4xl mx-auto">
+          <h2 class="text-3xl sm:text-4xl font-bold mb-8 text-center">
+            Programrészlet
+          </h2>
+          <div class="space-y-6 text-gray-700">
+            <div class="flex items-start">
+              <i
+                data-lucide="layers"
+                class="w-6 h-6 mr-4 text-indigo-600 flex-shrink-0"
+              ></i>
+              <div>
+                <strong>Vasárnap:</strong> érkezés, ismerkedős workshop, közös
+                vacsora és koccintás
+              </div>
+            </div>
+            <div class="flex items-start">
+              <i
+                data-lucide="sunrise"
+                class="w-6 h-6 mr-4 text-indigo-600 flex-shrink-0"
+              ></i>
+              <div>
+                <strong>Hétfő–kedd:</strong> reggeli, délelőtti és délutáni
+                workshop (jó időben szabadtéren), este vacsora és beszélgetés
+              </div>
+            </div>
+            <div class="flex items-start">
+              <i
+                data-lucide="sunset"
+                class="w-6 h-6 mr-4 text-indigo-600 flex-shrink-0"
+              ></i>
+              <div>
+                <strong>Szerda:</strong> reggeli után utolsó közös alkotás, majd
+                hazautazás
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ACCOMMODATION & MEALS -->
+      <section
+        id="accommodation"
+        class="reveal bg-gray-100 py-16 px-6 lg:px-20"
+        aria-labelledby="accommodation-label"
+      >
+        <div class="max-w-4xl mx-auto">
+          <h2 class="text-3xl sm:text-4xl font-bold mb-6 text-center">
+            Szállás &amp; ellátás
+          </h2>
+          <ul class="space-y-4 text-gray-700 mb-8">
+            <li class="flex items-center">
+              <i data-lucide="home" class="w-6 h-6 mr-3 text-indigo-600"></i>
+              Berky-kúria, Nagykónyi – franciaágyas szobákban vagy háromágyas
+              lakrészben
+            </li>
+            <li class="flex items-center">
+              <i data-lucide="coffee" class="w-6 h-6 mr-3 text-indigo-600"></i>
+              Félpanziós ellátás: reggeli + vacsora, kávé/tea egész nap
+            </li>
+            <li class="flex items-center">
+              <i data-lucide="users" class="w-6 h-6 mr-3 text-indigo-600"></i>
+              Maximális létszám: 11 fő – családias, bensőséges hangulatban
+            </li>
+          </ul>
+
+          <h3 class="text-2xl font-semibold mb-4">Mit tartalmaz az ár?</h3>
+          <ul class="list-disc list-inside text-gray-700 mb-8">
+            <li>Szállás 3 éjszakára</li>
+            <li>Minden workshopon való részvétel</li>
+            <li>Festőeszközök használata</li>
+            <li>Reggeli, vacsora, kávé/tea</li>
+          </ul>
+
+          <h3 class="text-2xl font-semibold mb-4">
+            Milyen felszereléssel dolgozunk?
+          </h3>
+          <ul class="list-disc list-inside text-gray-700 mb-8">
+            <li>Fabriano 1264, 300 g, 25% pamut papír</li>
+            <li>Lonely Finger ecsetek</li>
+            <li>Sonnet akvarell (16 szín)</li>
+            <li>Paletta, ceruza, ragasztó, vizesedény</li>
+          </ul>
+
+          <h3 class="text-2xl font-semibold mb-4">
+            Szállásdíjak opció szerint
+          </h3>
+          <div class="overflow-x-auto">
+            <table class="w-full text-gray-700 border-collapse">
+              <thead>
+                <tr class="bg-indigo-100">
+                  <th class="p-3 text-left">Opció</th>
+                  <th class="p-3 text-left">Ár/fő</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="border-b">
+                  <td class="p-3">Franciaágyas szoba egyedül</td>
+                  <td class="p-3">150 000 Ft</td>
+                </tr>
+                <tr class="border-b">
+                  <td class="p-3">Franciaágyas ketten (egy ágyon)</td>
+                  <td class="p-3">110 000 Ft</td>
+                </tr>
+                <tr class="border-b">
+                  <td class="p-3">Franciaágyas + pótágy</td>
+                  <td class="p-3">100 000–120 000 Ft</td>
+                </tr>
+                <tr>
+                  <td class="p-3">Háromágyas lakás (min. ketten)</td>
+                  <td class="p-3">110 000 Ft</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- GALLERY -->
+      <section
+        id="galeria"
+        class="reveal py-16 px-6 lg:px-20 bg-white"
+        aria-labelledby="gallery-label"
+      >
+        <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12">
+          Galéria
+        </h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div
+            class="overflow-hidden rounded-2xl shadow-lg transform hover:scale-105 transition"
+          >
+            <img
+              src="assets/img/bg2.jpg"
+              alt="Festők az udvaron"
+              class="gallery-item w-full h-64 object-cover cursor-pointer"
+            />
+          </div>
+          <div
+            class="overflow-hidden rounded-2xl shadow-lg transform hover:scale-105 transition"
+          >
+            <img
+              src="assets/img/berky1.jpg"
+              alt="Színes székek"
+              class="gallery-item w-full h-64 object-cover cursor-pointer"
+            />
+          </div>
+          <div
+            class="overflow-hidden rounded-2xl shadow-lg transform hover:scale-105 transition"
+          >
+            <img
+              src="assets/img/berky2.jpg"
+              alt="Belső tér"
+              class="gallery-item w-full h-64 object-cover cursor-pointer"
+            />
+          </div>
+          <div
+            class="overflow-hidden rounded-2xl shadow-lg transform hover:scale-105 transition"
+          >
+            <img
+              src="assets/img/bg1.jpg"
+              alt="Kúria épülete"
+              class="gallery-item w-full h-64 object-cover cursor-pointer"
+            />
+          </div>
+          <div
+            class="overflow-hidden rounded-2xl shadow-lg transform hover:scale-105 transition"
+          >
+            <img
+              src="assets/img/berky.webp"
+              alt="Műhely asztal"
+              class="gallery-item w-full h-64 object-cover cursor-pointer"
+            />
+          </div>
+          <div
+            class="overflow-hidden rounded-2xl shadow-lg transform hover:scale-105 transition"
+          >
+            <img
+              src="assets/img/berky3.jpg"
+              alt="Kút és udvar"
+              class="gallery-item w-full h-64 object-cover cursor-pointer"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- LIGHTBOX MODAL -->
+      <div
+        id="lightboxModal"
+        class="fixed inset-0 bg-black bg-opacity-80 hidden flex items-center justify-center z-50 px-4"
+      >
+        <!-- Bal nyíl -->
+        <button
+          id="lightboxPrev"
+          class="absolute left-4 top-1/2 transform -translate-y-1/2 text-white p-2 focus:outline-none"
+        >
+          <i data-lucide="chevron-left" class="w-8 h-8"></i>
+        </button>
+        <!-- Kép -->
+        <img
+          id="lightboxImg"
+          src=""
+          alt="Nagy kép"
+          class="max-w-full max-h-full rounded-lg shadow-lg mx-4"
+        />
+        <!-- Jobb nyíl -->
+        <button
+          id="lightboxNext"
+          class="absolute right-4 top-1/2 transform -translate-y-1/2 text-white p-2 focus:outline-none"
+        >
+          <i data-lucide="chevron-right" class="w-8 h-8"></i>
+        </button>
+        <!-- Bezáró gomb -->
+        <button
+          id="lightboxClose"
+          class="absolute top-6 right-6 text-white focus:outline-none"
+        >
+          <i data-lucide="x" class="w-8 h-8"></i>
+        </button>
+      </div>
+
+      <!-- REGISTRATION FORM -->
+      <section
+        id="jelentkezes"
+        class="reveal py-16 px-6 lg:px-20 bg-indigo-600 text-white"
+        aria-labelledby="registration-label"
+      >
+        <div class="max-w-3xl mx-auto">
+          <h2 class="text-3xl sm:text-4xl font-bold mb-6 text-center">
+            Jelentkezés
+          </h2>
+
+          <!-- ALERT BOXOK -->
+          <div
+            id="alertSuccess"
+            class="hidden flex w-full bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded-lg shadow-lg"
+            role="alert"
+          >
+            <i
+              data-lucide="circle-check-big"
+              class="w-6 h-6 mr-2 text-green-600"
+            ></i>
+            <span class="block sm:inline"
+              >Sikeresen jelentkeztél a táborra.</span
+            >
+          </div>
+
+          <div
+            id="alertError"
+            class="hidden fixed top-24 left-1/2 transform -translate-x-1/2 w-11/12 max-w-md bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded-lg shadow-lg"
+            role="alert"
+          >
+            <strong class="font-bold">Hiba!</strong>
+            <span id="alertErrorMsg" class="block sm:inline"
+              >Kérlek ellenőrizd a mezők kitöltését.</span
+            >
+          </div>
+
+          <form id="registerForm" class="space-y-6">
+            <div
+              class="block lg:flex lg:gap-1 lg:items-start lg:justify-between"
+            >
+              <div class="w-full p-2">
+                <div>
+                  <label for="name" class="block mb-2 font-semibold"
+                    >Neved*</label
+                  >
+                  <input
+                    type="text"
+                    id="name"
+                    class="w-full p-3 rounded-lg text-gray-800"
+                    placeholder="Teljes neved"
+                    required
+                  />
+                </div>
+                <div>
+                  <label for="email" class="block mb-2 font-semibold"
+                    >Email*</label
+                  >
+                  <input
+                    type="email"
+                    id="email"
+                    class="w-full p-3 rounded-lg text-gray-800"
+                    placeholder="E-mail címed"
+                    required
+                  />
+                </div>
+                <div>
+                  <label for="phone" class="block mb-2 font-semibold"
+                    >Telefonszám*</label
+                  >
+                  <input
+                    type="tel"
+                    id="phone"
+                    class="w-full p-3 rounded-lg text-gray-800"
+                    placeholder="Telefonszámod"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="w-full p-2">
+                <div>
+                  <label for="szallas" class="block mb-2 font-semibold"
+                    >Szállásopció*</label
+                  >
+                  <select
+                    id="szallas"
+                    class="w-full p-3 rounded-lg text-gray-800"
+                  >
+                    <option>Franciaágyas egyedül – 150 000 Ft</option>
+                    <option>Franciaágyas ketten – 110 000 Ft/fő</option>
+                    <option>Franciaágyas+pótágy – 100 000–120 000 Ft/fő</option>
+                    <option>Háromágyas lakás – 110 000 Ft/fő</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="igenyek" class="block mb-2 font-semibold"
+                    >Ételallergia / speciális igény</label
+                  >
+                  <textarea
+                    id="igenyek"
+                    rows="3"
+                    class="w-full p-3 rounded-lg text-gray-800"
+                    placeholder="Pl. laktózmentes, vegetáriánus…"
+                  ></textarea>
+                </div>
+              </div>
+            </div>
+            <button
+              type="submit"
+              class="w-full bg-white text-indigo-600 font-semibold py-3 rounded-lg shadow-lg hover:bg-gray-100 transition"
+            >
+              Elküldöm a jelentkezést
+            </button>
+          </form>
+          <p class="mt-6 text-sm text-indigo-200">
+            Súlyos ételallergiát (pl. mogyoró) sajnos nem tudunk vállalni.
+          </p>
+          <p class="mt-2 text-sm text-indigo-200">
+            Fizetés két részletben, visszatérítés lemondás esetén.
+          </p>
+          <p class="mt-2 text-sm text-indigo-200">
+            A csillaggal (*) jelölt mezők kitöltése kötelező.
+          </p>
+        </div>
+      </section>
+
+      <!-- INSTRUCTOR -->
+      <section
+        id="taborvezeto"
+        class="reveal py-16 px-6 lg:px-20"
+        aria-labelledby="instructor-label"
+      >
+        <div
+          class="max-w-3xl mx-auto flex flex-col md:flex-row items-center gap-8"
+        >
+          <div class="flex-shrink-0">
+            <div
+              class="w-32 h-32 bg-indigo-100 rounded-full flex items-center justify-center text-indigo-500 text-3xl font-bold"
+            >
+              K
+            </div>
+          </div>
+          <div>
+            <div class="flex flex-col lg:flex-row items-center mb-2">
+              <h3 class="text-2xl sm:text-3xl font-semibold">
+                Kinga, a tábor vezetője
+              </h3>
+              <div class="flex items-center">
+                <a
+                  href="https://www.facebook.com/profile.php?id=61556361605729"
+                  target="_blank"
+                  class="text-gray-400 hover:text-gray-700 mx-2"
+                >
+                  <i data-lucide="facebook" class="w-6 h-6"></i>
+                </a>
+                <a
+                  href="https://www.instagram.com/kinga_paints/"
+                  target="_blank"
+                  class="text-gray-400 hover:text-gray-700 mx-2"
+                >
+                  <i data-lucide="instagram" class="w-6 h-6"></i>
+                </a>
+                <a
+                  href="https://www.youtube.com/@kinga_paints"
+                  target="_blank"
+                  class="text-gray-400 hover:text-gray-700 mx-2"
+                >
+                  <i data-lucide="youtube" class="w-6 h-6"></i>
+                </a>
+              </div>
+            </div>
+            <p class="text-gray-700">
+              „Az akvarell számomra nem csupán festék és papír – élmény.
+              Szeretettel várlak ebben a nyugodt környezetben, ahol
+              megismerheted a technikák fortélyait, és szabadjára engedheted a
+              kreativitásod.”
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section
+        class="reveal py-16 px-6 lg:px-20 bg-indigo-600 text-white text-center"
+        aria-labelledby="cta-label"
+      >
+        <h2 class="text-3xl sm:text-4xl font-bold mb-4">Ne maradj le!</h2>
+        <p class="mb-6">
+          Foglalj helyet most, éld át a festés és a pihenés varázsát!
+        </p>
+        <a
+          href="#jelentkezes"
+          class="inline-block bg-white text-indigo-600 font-semibold py-3 px-8 rounded-lg shadow-lg hover:bg-gray-100 transition"
+        >
+          Jelentkezés
+        </a>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer
+      role="contentinfo"
+      class="bg-gray-800 px-12 text-gray-400 py-8 text-center flex flex-col lg:flex-row items-center justify-center lg:justify-between"
+    >
+      <p>
+        &copy; 2025 Őszi Akvarelltábor a Berky-kúriában. Minden jog fenntartva.
+      </p>
+      <div class="flex items-center justify-center">
+        <a
+          href="https://www.facebook.com/profile.php?id=61556361605729"
+          target="_blank"
+          class="text-gray-400 hover:text-white mx-2"
+          aria-label="Facebook"
+        >
+          <i data-lucide="facebook" class="w-6 h-6"></i>
+        </a>
+        <a
+          href="https://www.instagram.com/kinga_paints/"
+          target="_blank"
+          class="text-gray-400 hover:text-white mx-2"
+          aria-label="Instagram"
+        >
+          <i data-lucide="instagram" class="w-6 h-6"></i>
+        </a>
+        <a
+          href="https://www.youtube.com/@kinga_paints"
+          target="_blank"
+          class="text-gray-400 hover:text-white mx-2"
+          aria-label="Youtube"
+        >
+          <i data-lucide="youtube" class="w-6 h-6"></i>
+        </a>
+      </div>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script src="main.js"></script>
+  </body>
+</html>

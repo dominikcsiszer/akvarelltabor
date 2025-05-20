@@ -1,0 +1,6 @@
+# Engedélyezzük az összes robotnak a teljes oldal feltérképezését
+User-agent: *
+Allow: /
+
+# Sitemap helye
+Sitemap: https://www.berky-kuria.hu/sitemap.xml
