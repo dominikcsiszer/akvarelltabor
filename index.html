@@ -114,6 +114,19 @@
       .parallax {
         background-attachment: fixed;
       }
+      #stack {
+        position: fixed;
+        top: 50%;
+        right: 2rem;
+        transform: translateY(-50%) translateX(0);
+        transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+        opacity: 0;
+        pointer-events: none;
+      }
+      #stack.show {
+        opacity: 1;
+        pointer-events: auto;
+      }
     </style>
   </head>
   <body
@@ -206,7 +219,7 @@
         class="reveal py-16 px-6 lg:px-20"
         aria-labelledby="overview-label"
       >
-        <div class="max-w-3xl mx-auto text-center">
+        <div class="max-w-4xl mx-auto text-center">
           <h2 class="text-3xl sm:text-4xl font-bold mb-4">Mi vár rád?</h2>
           <p class="text-lg text-gray-700 mb-6">
             Egy eldugott, hangulatos falucska, a Berky-kúria ad otthont ennek a
@@ -246,7 +259,7 @@
         class="reveal bg-gray-100 py-16 px-6 lg:px-20"
         aria-labelledby="audience-label"
       >
-        <div class="max-w-3xl mx-auto text-center">
+        <div class="max-w-4xl mx-auto text-center">
           <h2 class="text-3xl sm:text-4xl font-bold mb-4">Kinek ajánlom?</h2>
           <p class="text-lg text-gray-700 mb-6">
             Ha szereted a természetet, a csendet és a festést – és jól jönne egy
@@ -258,7 +271,50 @@
             valami igazán szépet alkotni.
           </p>
         </div>
-      </section>
+      </section> 
+      
+      <!-- IMAGE STACK BETWEEN AUDIENCE & PROGRAM -->
+      <div id="stack-wrapper" class="relative w-full py-8 lg:py-16 z-10">
+        <!-- csak desktopon látszik -->
+        <div id="stack" class="hidden lg:block">
+        <div class="relative h-80 w-60">
+            <img
+            src="assets/img/stack1.jpg"
+            alt="Workshop pillanatkép"
+            class="absolute top-0 left-0 w-60 border-4 border-white rounded-lg shadow-2xl transform rotate-2 z-30"
+            />
+            <img
+            src="assets/img/stack2.jpg"
+            alt="Plein air festés"
+            class="absolute top-12 left-4 w-60 border-4 border-white rounded-lg shadow-2xl transform -rotate-2 z-20"
+            />
+            <img
+            src="assets/img/stack3.jpg"
+            alt="Közös alkotás"
+            class="absolute top-24 left-8 w-60 border-4 border-white rounded-lg shadow-2xl transform rotate-1 z-10"
+            />
+        </div>
+        </div>
+    
+        <!-- mobilra marad a slider -->
+        <div class="lg:hidden flex overflow-x-auto space-x-4 px-4">
+        <img
+            src="assets/img/stack1.jpg"
+            alt="Workshop pillanatkép"
+            class="w-64 flex-shrink-0 border-4 border-white rounded-lg shadow-lg"
+        />
+        <img
+            src="assets/img/stack2.jpg"
+            alt="Plein air festés"
+            class="w-64 flex-shrink-0 border-4 border-white rounded-lg shadow-lg"
+        />
+        <img
+            src="assets/img/stack3.jpg"
+            alt="Közös alkotás"
+            class="w-64 flex-shrink-0 border-4 border-white rounded-lg shadow-lg"
+        />
+        </div>
+    </div>
 
       <!-- PROGRAM -->
       <section
@@ -317,16 +373,18 @@
           </h2>
           <ul class="space-y-4 text-gray-700 mb-8">
             <li class="flex items-center">
-              <i data-lucide="home" class="w-6 h-6 mr-3 text-indigo-600"></i>
-              Berky-kúria, Nagykónyi – franciaágyas szobákban vagy háromágyas
-              lakrészben
+              <i data-lucide="home" class="w-6 h-6 mr-3 text-indigo-600 flex-shrink-0"></i>
+              <div>
+                  Berky-kúria, Nagykónyi – franciaágyas szobákban vagy háromágyas
+                  lakrészben
+              </div>
             </li>
             <li class="flex items-center">
-              <i data-lucide="coffee" class="w-6 h-6 mr-3 text-indigo-600"></i>
+              <i data-lucide="coffee" class="w-6 h-6 mr-3 text-indigo-600 flex-shrink-0"></i>
               Félpanziós ellátás: reggeli + vacsora, kávé/tea egész nap
             </li>
             <li class="flex items-center">
-              <i data-lucide="users" class="w-6 h-6 mr-3 text-indigo-600"></i>
+              <i data-lucide="users" class="w-6 h-6 mr-3 text-indigo-600 flex-shrink-0"></i>
               Maximális létszám: 11 fő – családias, bensőséges hangulatban
             </li>
           </ul>
