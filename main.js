@@ -182,3 +182,17 @@ document.addEventListener('DOMContentLoaded', () => {
   
   
   
+
+  const toggleBtn = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  let menuOpen = false;
+
+  toggleBtn.addEventListener('click', () => {
+    menuOpen = !menuOpen;
+    if (menuOpen) {
+      mobileMenu.classList.add('menu-open');
+    } else {
+      mobileMenu.classList.remove('menu-open');
+    }
+  });

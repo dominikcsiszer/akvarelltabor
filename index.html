@@ -127,6 +127,16 @@
         opacity: 1;
         pointer-events: auto;
       }
+      .menu-transition {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease-in-out , padding-bottom 0.5s ease-in-out;
+      }
+
+      .menu-open {
+        max-height: 600px;
+        padding-bottom: 1rem;
+      }
     </style>
   </head>
   <body
@@ -147,21 +157,49 @@
       <!-- STICKY NAV (hidden by default) -->
       <nav
         id="stickyNav"
-        class="fixed top-4 left-4 right-4 backdrop-blur-lg bg-white bg-opacity-30 rounded-xl shadow-lg opacity-0 pointer-events-none z-50 transition-opacity duration-300"
+        class="fixed top-4 left-4 right-4 backdrop-blur-md bg-white bg-opacity-30 rounded-xl shadow-lg opacity-0 pointer-events-none z-50 transition-opacity duration-300"
       >
-        <div class="flex items-center justify-between px-6 py-3">
+        <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
           <!-- Balra a cím -->
-          <a href="#" class="text-gray-900 font-semibold text-base lg:text-lg">
+          <a href="#" class="text-[#455c83] font-semibold text-base lg:text-lg">
             Őszi Akvarelltábor
           </a>
-          <!-- Jobbra a gomb -->
-          <a
-            href="#jelentkezes"
-            class="bg-indigo-600 hover:bg-indigo-700 text-sm lg:text-base text-white font-semibold py-2 px-4 rounded-full transition"
-          >
-            Jelentkezés
-          </a>
+
+          <!-- HAMBURGER ICON (MOBILE) -->
+          <button id="menu-toggle" class="md:hidden text-indigo-700 focus:outline-none">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+              viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+
+          <!-- DESKTOP MENU -->
+          <ul class="hidden md:flex space-x-4 text-[#455c83] items-center">
+            <li><a href="#overview" class="hover:text-indigo-700 transition">Mi vár rád?</a></li>
+            <li><a href="#galeria" class="hover:text-indigo-700 transition">Galéria</a></li>
+            <li><a href="#program" class="hover:text-indigo-700 transition">Programok</a></li>
+            <li><a href="#accommodation" class="hover:text-indigo-700 transition">Szállás & ellátás</a></li>
+            <li><a href="#price" class="hover:text-indigo-700 transition">Ár</a></li>
+            <li>
+              <a href="#jelentkezes" class="bg-indigo-600 hover:bg-indigo-700 text-sm lg:text-base text-white font-semibold py-2 px-4 rounded-full transition">
+                Jelentkezés
+              </a>
+            </li>
+          </ul>
         </div>
+         <!-- MOBILE MENU -->
+         <ul id="mobile-menu" class="lg:hidden menu-transition w-full flex flex-col items-center px-4 text-[#455c83]">
+          <li><a href="#overview" class="block hover:text-indigo-700">Mi vár rád?</a></li>
+          <li><a href="#galeria" class="block hover:text-indigo-700">Galéria</a></li>
+          <li><a href="#program" class="block hover:text-indigo-700">Programok</a></li>
+          <li><a href="#accommodation" class="block hover:text-indigo-700">Szállás & ellátás</a></li>
+          <li><a href="#price" class="block hover:text-indigo-700">Ár</a></li>
+          <li class="w-full">
+            <a href="#jelentkezes" class="inline-block w-full text-center bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-2 px-4 rounded-full transition">
+              Jelentkezés
+            </a>
+          </li>
+        </ul>
       </nav>
       <div
         class="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center text-center px-4"
@@ -494,7 +532,7 @@
           <img src="/assets/vector/equipment.png" alt="TODO" class="lg:w-1/2 w-full max-w-md mx-auto" />
         </div>
 
-        <div class="relative p-12">
+        <div id="price" class="relative p-12">
           <img src="/assets/vector/leaf.png" alt="Levél dekor" class="absolute w-24 top-0 left-0 opacity-30" />
           <img src="/assets/vector/brush.png" alt="Ecset dekor" class="absolute w-28 bottom-0 right-0 opacity-30" />
         
