@@ -136,52 +136,7 @@ function showAlert(element) {
   setTimeout(() => {
       element.classList.add('hidden');
   }, 5000);
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-    const stack         = document.getElementById('stack');
-    const overview      = document.getElementById('overview');
-    const program       = document.getElementById('program');
-    const accommodation = document.getElementById('accommodation');
-  
-    const MARGIN = 32; // 2rem
-  
-    function onScrollOrResize() {
-      const scrollY   = window.scrollY;
-      const viewportH = window.innerHeight;
-  
-      // mikortól jelenjen meg / tűnjön el?
-      const showStart = overview.offsetTop;
-      const rawEnd    = accommodation.offsetTop + accommodation.offsetHeight - viewportH + 500;
-  
-      // SHOW / HIDE
-      if (scrollY >= showStart && scrollY <= rawEnd) {
-        stack.classList.add('show');
-      } else {
-        stack.classList.remove('show');
-        return;
-      }
-  
-      // MOVEMENT: csak a program szekció tetejétől
-      const moveStart = program.offsetTop + program.offsetHeight - viewportH;
-      const moveRange = rawEnd - moveStart;
-      let p = (scrollY - moveStart) / moveRange;
-      // gyorsított: 1.2×
-      p = Math.min(Math.max(p * 5, 0), 1);
-  
-      const totalDistance = window.innerWidth - 2 * MARGIN - stack.offsetWidth;
-      const offsetX = - totalDistance * p;
-  
-      stack.style.transform = `translateY(-50%) translateX(${offsetX}px)`;
-    }
-  
-    window.addEventListener('scroll',  onScrollOrResize);
-    window.addEventListener('resize', onScrollOrResize);
-    onScrollOrResize();
-  });
-  
-  
-  
+}  
 
   const toggleBtn = document.getElementById('menu-toggle');
   const mobileMenu = document.getElementById('mobile-menu');
